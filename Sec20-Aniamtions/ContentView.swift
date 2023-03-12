@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var show = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Press me", action: {
+                self.show.toggle()
+                
+            })
+            if show {
+                Text("True")
+            }else{
+                Text("False")
+            }
+            
+            Image(systemName: "chevron.up.square")
+                .rotationEffect(.degrees(self.show ? 0 :180))
+                .animation(.default)
+            
         }
         .padding()
     }
