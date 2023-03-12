@@ -11,6 +11,7 @@
 		0E47754729AEEC920013B92A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47754629AEEC920013B92A /* ContentView.swift */; };
 		0E47754929AEEC940013B92A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E47754829AEEC940013B92A /* Assets.xcassets */; };
 		0E47754C29AEEC940013B92A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E47754B29AEEC940013B92A /* Preview Assets.xcassets */; };
+		0EE2FD6129BD61F70004B2FF /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2FD6029BD61F70004B2FF /* DetailsView.swift */; };
 		0EF22C0329AEEEC400667CB0 /* SwiftUIAll_WatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF22C0229AEEEC400667CB0 /* SwiftUIAll_WatchOSApp.swift */; };
 		0EF22C0529AEEEC400667CB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF22C0429AEEEC400667CB0 /* ContentView.swift */; };
 		0EF22C0729AEEEC500667CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF22C0629AEEEC500667CB0 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		0E47754629AEEC920013B92A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E47754829AEEC940013B92A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E47754B29AEEC940013B92A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0EE2FD6029BD61F70004B2FF /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		0EF22C0029AEEEC300667CB0 /* SwiftUIAll-WatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIAll-WatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF22C0229AEEEC400667CB0 /* SwiftUIAll_WatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAll_WatchOSApp.swift; sourceTree = "<group>"; };
 		0EF22C0429AEEEC400667CB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,10 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				0E47754429AEEC920013B92A /* SwiftUIAllDevicesApp.swift */,
+				0EF22C3829AEF33B00667CB0 /* AnimalDetails.swift */,
 				0E47754629AEEC920013B92A /* ContentView.swift */,
 				0E47754829AEEC940013B92A /* Assets.xcassets */,
 				0E47754A29AEEC940013B92A /* Preview Content */,
-				0EF22C3829AEF33B00667CB0 /* AnimalDetails.swift */,
 			);
 			path = SwiftUIAllDevices;
 			sourceTree = "<group>";
@@ -168,6 +170,7 @@
 				0EF22C0429AEEEC400667CB0 /* ContentView.swift */,
 				0EF22C0629AEEEC500667CB0 /* Assets.xcassets */,
 				0EF22C0829AEEEC500667CB0 /* Preview Content */,
+				0EE2FD6029BD61F70004B2FF /* DetailsView.swift */,
 			);
 			path = "SwiftUIAll-WatchOS Watch App";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				0EF22C0329AEEEC400667CB0 /* SwiftUIAll_WatchOSApp.swift in Sources */,
 				0EF22C3A29AEF33B00667CB0 /* AnimalDetails.swift in Sources */,
 				0EF22C3029AEEFDF00667CB0 /* Animal.swift in Sources */,
+				0EE2FD6129BD61F70004B2FF /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

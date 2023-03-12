@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    let animal = AnimalService.getAnimals()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List {
+            ForEach(self.animal, id: \.name) { animal in
+                VStack {
+                    NavigationLink(destination: DetailsView(animal: animal)){
+                        Text(animal.image)
+                            .font(.headline)
+                            .font(.custom("Arial", size: 100))
+                    }
+                }
+            }.listStyle(.carousel)
         }
         .padding()
     }
