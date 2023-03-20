@@ -9,12 +9,15 @@ import SwiftUI
 
 struct StockListView: View {
     let stocks:[StockViewModel]
+    @State private var dragChangeX = 0.0
     var body: some View {
         List(stocks, id: \.symbol, rowContent: { stock in
             HStack{
                 VStack(alignment: .leading){
                     Text("\(stock.symbol)")
+                        .offset(x: dragChangeX)
                     Text("\(stock.description)")
+                        .offset(x: dragChangeX)
                 }
                 Spacer()
                 VStack(alignment: .leading){
@@ -22,10 +25,17 @@ struct StockListView: View {
                     Text("$\(stock.stock.change)")
                         .background(Color.red)
                 }
-            }
+            }.gesture(
+                DragGesture()
+                    .onChanged({ value in
+                        dragChangeX = value.translation.width
+                        print("Drag started \(value.translation)")
+                    })
+                    .onEnded({ value in
+                        print("Drag ended \(value.translation)")
+                    }))
         })
         .listStyle(.insetGrouped)
-     
     }
 }
 
