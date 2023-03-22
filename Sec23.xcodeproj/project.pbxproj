@@ -11,6 +11,7 @@
 		0E1E565529C93B8400404521 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E565429C93B8400404521 /* MapCoordinator.swift */; };
 		0E1E565729C93D8900404521 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E565629C93D8900404521 /* LocationManager.swift */; };
 		0E1E565A29C9472800404521 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E565929C9472800404521 /* Landmark.swift */; };
+		0E21295629CA9A5B00E717F9 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E21295529CA9A5B00E717F9 /* PlaceListView.swift */; };
 		0E68332E29C7F64F00668725 /* Sec23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68332D29C7F64F00668725 /* Sec23App.swift */; };
 		0E68333029C7F64F00668725 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68332F29C7F64F00668725 /* ContentView.swift */; };
 		0E68333229C7F65100668725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E68333129C7F65100668725 /* Assets.xcassets */; };
@@ -21,8 +22,8 @@
 		0E1E565229C93A2A00404521 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0E1E565429C93B8400404521 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		0E1E565629C93D8900404521 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		0E1E565829C93FD700404521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E1E565929C9472800404521 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		0E21295529CA9A5B00E717F9 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
 		0E68332A29C7F64F00668725 /* Sec23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sec23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E68332D29C7F64F00668725 /* Sec23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec23App.swift; sourceTree = "<group>"; };
 		0E68332F29C7F64F00668725 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E21295729CA9A6800E717F9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E565929C9472800404521 /* Landmark.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		0E68332129C7F64F00668725 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +69,15 @@
 		0E68332C29C7F64F00668725 /* Sec23 */ = {
 			isa = PBXGroup;
 			children = (
-				0E1E565829C93FD700404521 /* Info.plist */,
+				0E21295729CA9A6800E717F9 /* models */,
 				0E68332D29C7F64F00668725 /* Sec23App.swift */,
 				0E1E565229C93A2A00404521 /* MapView.swift */,
 				0E1E565429C93B8400404521 /* MapCoordinator.swift */,
+				0E21295529CA9A5B00E717F9 /* PlaceListView.swift */,
 				0E68332F29C7F64F00668725 /* ContentView.swift */,
+				0E1E565629C93D8900404521 /* LocationManager.swift */,
 				0E68333129C7F65100668725 /* Assets.xcassets */,
 				0E68333329C7F65100668725 /* Preview Content */,
-				0E1E565629C93D8900404521 /* LocationManager.swift */,
-				0E1E565929C9472800404521 /* Landmark.swift */,
 			);
 			path = Sec23;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 				0E1E565529C93B8400404521 /* MapCoordinator.swift in Sources */,
 				0E1E565729C93D8900404521 /* LocationManager.swift in Sources */,
 				0E1E565329C93A2A00404521 /* MapView.swift in Sources */,
+				0E21295629CA9A5B00E717F9 /* PlaceListView.swift in Sources */,
 				0E68332E29C7F64F00668725 /* Sec23App.swift in Sources */,
 				0E1E565A29C9472800404521 /* Landmark.swift in Sources */,
 			);

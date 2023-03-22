@@ -12,6 +12,7 @@ struct ContentView: View {
     @ObservedObject private var locationManager = LocationManager()
     @State private var landmarks = [Landmark]()
     @State private var search: String = ""
+    @State private var onTap:Bool = false
     var body: some View {
         ZStack(alignment: .top) {
             MapView(landmarks: self.landmarks)
@@ -22,8 +23,14 @@ struct ContentView: View {
             .padding(.all)
             .textFieldStyle(.roundedBorder)
             
+            PlaceListView(landmarks: self.landmarks){
+                self.onTap.toggle()
+            }
+            .offset(y: calculateOffset())
             
-        }.edgesIgnoringSafeArea(.bottom)
+            
+        }
+        //.edgesIgnoringSafeArea(.bottom)
         
     }
     
@@ -51,6 +58,16 @@ struct ContentView: View {
             print("Mapitems: \(mapItems)")
             
         })
+    }
+    
+    func calculateOffset() -> CGFloat{
+        if self.landmarks.count > 0 && self.onTap == true {
+            return UIScreen.main.bounds.height - 600
+        }else if self.onTap == false{
+            return UIScreen.main.bounds.height - 200
+        }else{
+            return  UIScreen.main.bounds.height
+        }
     }
 }
 
