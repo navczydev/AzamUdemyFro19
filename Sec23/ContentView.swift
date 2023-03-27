@@ -7,12 +7,38 @@
 
 import SwiftUI
 import MapKit
+import CoreMotion
 
 struct ContentView: View {
     @ObservedObject private var locationManager = LocationManager()
     @State private var landmarks = [Landmark]()
     @State private var search: String = ""
     @State private var onTap:Bool = false
+    private let pedometer:CMPedometer = CMPedometer()
+    
+    func countSteps(){
+        let isPedometereAvlbl = CMPedometer.isPedometerEventTrackingAvailable() && CMPedometer.isDistanceAvailable() && CMPedometer.isStepCountingAvailable()
+        
+        if isPedometereAvlbl{
+            guard let startDate = Calendar.current.date(byAdding: .day,value: -7, to: Date()) else{
+                return
+            }
+            pedometer.queryPedometerData(from: startDate, to: Date(), withHandler: {
+                (data, error) in
+                guard let data = data, error == nil else{
+                    return
+                }
+                print("Steps \(data.numberOfSteps)")
+                
+                let distanceInMeteres = Measurement(value: Double(truncating: data.distance!), unit: UnitLength.meters)
+                
+                print("Distance \(distanceInMeteres)")
+            })
+        }else{
+            return
+        }
+    }
+    
     var body: some View {
         ZStack(alignment: .top) {
             MapView(landmarks: self.landmarks)
@@ -29,6 +55,8 @@ struct ContentView: View {
             .offset(y: calculateOffset())
             
             
+        }.onAppear{
+            countSteps()
         }
         //.edgesIgnoringSafeArea(.bottom)
         

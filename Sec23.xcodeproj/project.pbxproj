@@ -301,6 +301,7 @@
 				INFOPLIST_FILE = Sec23/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This is required to show current location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires permisison to show location";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This is required to calculate steps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -333,6 +334,7 @@
 				INFOPLIST_FILE = Sec23/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This is required to show current location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires permisison to show location";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This is required to calculate steps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
